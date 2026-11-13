@@ -1,0 +1,46 @@
+{
+  "name": "@arorms/core",
+  "version": "0.1.1",
+  "description": "arorms frontend runtime: OIDC auth, API client, theme, i18n. No visual output.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.ts"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test src/*.test.ts src/**/*.test.ts",
+    "prepack": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.21",
+    "axios": "^1.13.6",
+    "oidc-client-ts": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@types/node": "^24.13.3",
+    "typescript": "~5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "arorms",
+    "react",
+    "oidc",
+    "frontend"
+  ]
+}
